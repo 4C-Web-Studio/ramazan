@@ -1,0 +1,12 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Трекер привычек</title>
+<h1>Трекер привычек</h1><form><input id="habit"><button id="create">Создать</button></form>
+<button id="reset">Сбросить отметки</button><ul id="habits"></ul><output id="completed">0</output>
+<script>
+const list=document.querySelector('#habits');
+const count=()=>document.querySelector('#completed').textContent=list.querySelectorAll('input:checked').length;
+document.querySelector('form').onsubmit=e=>{e.preventDefault();const name=document.querySelector('#habit').value.trim();if(!name)return;
+const li=document.createElement('li');const check=document.createElement('input');check.type='checkbox';check.onchange=count;
+const label=document.createElement('span');label.textContent=name;const del=document.createElement('button');del.textContent='Удалить';del.onclick=()=>{li.remove();count()};
+li.append(check,label,del);list.append(li);document.querySelector('#habit').value=''};
+document.querySelector('#reset').onclick=()=>{list.querySelectorAll('input').forEach(c=>c.checked=false);count()};
+</script></html>

@@ -1,0 +1,2 @@
+<!doctype html><meta charset="utf-8"><button id="begin">Начать</button><button id="submit" disabled>Отправить</button><p id="progress">Обработка</p>
+<script>document.querySelector('#begin').onclick=()=>setTimeout(()=>{document.querySelector('#submit').disabled=false;document.querySelector('#progress').remove()},1800)</script>

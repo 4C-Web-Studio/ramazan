@@ -1,0 +1,1 @@
+CONFIG = {'title': 'Клуб настольных игр', 'name': 'nickname', 'mail': 'mailbox', 'secret': 'passphrase', 'ok': 'member-title', 'error': 'form-message', 'name_min': 2, 'password_min': 8, 'route': '/join', 'end': '/member'}

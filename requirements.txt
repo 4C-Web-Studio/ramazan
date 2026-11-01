@@ -1,0 +1,7 @@
+selenium>=4.11,<5
+pytest>=8,<10
+Flask>=3,<4
+requests>=2.32,<3
+Faker>=30,<41
+pytest-html>=4,<5
+behave>=1.2.6,<2
